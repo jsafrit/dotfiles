@@ -1,0 +1,26 @@
+[user]
+	name = John Safrit
+	email = jsafrit@users.noreply.github.com
+[credential]
+	helper = cache --timeout=3600
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+[color]
+	diff = auto
+	status = auto
+	interactive = auto
+	branch = auto
+	ui = auto
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
