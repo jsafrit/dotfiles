@@ -24,3 +24,7 @@ function g {
         git status
     fi
 }
+
+function psg { 
+    ps -efw | grep $* | grep -v grep
+}
