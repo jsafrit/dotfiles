@@ -28,3 +28,7 @@ function g {
 function psg { 
     ps -efw | grep $* | grep -v grep
 }
+
+function alarm {
+    sleep $*; gnome-open /usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga
+}
