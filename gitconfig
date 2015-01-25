@@ -19,6 +19,7 @@
 [alias]
 	a = add
 	co = commit -m 
+	ss = status --short
 	st = status
 	br = branch
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
