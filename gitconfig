@@ -23,5 +23,7 @@
 	st = status
 	br = branch
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	phist = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	type = cat-file -t
 	dump = cat-file -p
+	ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
