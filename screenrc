@@ -1,0 +1,14 @@
+# Remove startup message
+startup_message off
+# Turn whole-screen-flash-on-tab-complete "feature"
+vbell off
+# Window list at the bottom. hostname, centered tabs and redmarked active windows
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+# Default screens (uncomment below for default screen sessions to run on screen (-t sets the title for each screen session)
+##  screen -t shell1	0
+##  screen -t shell2	1
+##  screen -t server	2	ssh me@myserver
+screen -t dev 1 ssh dev001
+screen -t base 2 ssh base003
+screen -t bash 0
