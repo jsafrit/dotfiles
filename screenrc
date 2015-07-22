@@ -2,6 +2,14 @@
 startup_message off
 # Turn whole-screen-flash-on-tab-complete "feature"
 vbell off
+# Number of scroll lines buffered
+defscrollback 1000
+# Fix scrollback issue: makes scrollbar active again in xterm
+termcapinfo xterm* ti@:te@
+
+# Bind F11 and F12 (NOT F1 and F2) to previous and next screen window
+bindkey -k F2 next
+
 # Window list at the bottom. hostname, centered tabs and redmarked active windows
 hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
@@ -9,6 +17,8 @@ hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)
 ##  screen -t shell1	0
 ##  screen -t shell2	1
 ##  screen -t server	2	ssh me@myserver
-screen -t dev 1 ssh dev001
-screen -t base 2 ssh base003
+#screen -t dev 1 ssh dev001
+#screen -t base 2 ssh base003
+screen -t monitor   2   htop
+screen -t code 1
 screen -t bash 0

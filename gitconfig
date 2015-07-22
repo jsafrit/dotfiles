@@ -1,6 +1,8 @@
 [user]
 	name = John Safrit
 	email = jsafrit@users.noreply.github.com
+[push]
+	default = simple
 [credential]
 	helper = cache --timeout=3600
 [core]
