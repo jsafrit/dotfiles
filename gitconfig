@@ -29,3 +29,5 @@
 	type = cat-file -t
 	dump = cat-file -p
 	ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
+[push]
+	default = simple
