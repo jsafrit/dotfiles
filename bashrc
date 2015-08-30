@@ -111,9 +111,14 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Code
-source /usr/local/bin/virtualenvwrapper.sh
+# virtualenvwrapper init
+WORKON_HOME=$HOME/.virtualenvs
+PROJECT_HOME=$HOME/Code
+VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then 
+	. /usr/local/bin/virtualenvwrapper.sh
+fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -125,3 +130,4 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
