@@ -111,6 +111,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
 # virtualenvwrapper init
 WORKON_HOME=$HOME/.virtualenvs
 PROJECT_HOME=$HOME/Code
