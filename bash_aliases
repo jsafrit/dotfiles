@@ -17,6 +17,7 @@ alias goh='ssh -t jsafrit@grizzly.dnsdojo.com screen -R'
 alias gor='ssh -t rnortman@base003.truveon.com screen -R'
 alias goj='ssh -t jsafrit@base003.truveon.com screen -R'
 alias gpsql='ssh -L 127.0.0.1:5000:localhost:5432 jsafrit@base003.truveon.com'
+alias gpolar='ssh localhost -p 2222'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 #alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
