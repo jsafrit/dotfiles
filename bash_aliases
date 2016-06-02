@@ -16,6 +16,7 @@ alias checkproxy='netstat -ntlp | grep :6666'
 alias goh='ssh -t jsafrit@grizzly.dnsdojo.com screen -R'
 alias gor='ssh -t rnortman@base003.truveon.com screen -R'
 alias goj='ssh -t jsafrit@base003.truveon.com screen -R'
+alias gojd='ssh -t jsafrit@dev001.truveon.com screen -R'
 alias gpsql='ssh -L 127.0.0.1:5000:localhost:5432 jsafrit@base003.truveon.com'
 alias gpolar='ssh localhost -p 2222'
 # Add an "alert" alias for long running commands.  Use like so:
