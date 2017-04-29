@@ -13,12 +13,22 @@ alias updateme='sudo apt-get update && sudo apt-get upgrade'
 alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias goproxy='ssh -D 6666 constp -N'
 alias checkproxy='netstat -ntlp | grep :6666'
-alias goh='ssh -t jsafrit@grizzly.dnsdojo.com screen -R'
-alias gor='ssh -t rnortman@base003.truveon.com screen -R'
-alias goj='ssh -t jsafrit@base003.truveon.com screen -R'
+
+alias gohi='ssh -t jsafrit@192.168.0.199 screen -R'
+alias goho='ssh -t jsafrit@grizzly.dnsdojo.com screen -R'
+
+alias gor='ssh -t rnortman@staging.truveon.com screen -R'
+alias gorp='ssh -t rnortman@truefficiency.truveon.com screen -R'
+
 alias gojd='ssh -t jsafrit@dev001.truveon.com screen -R'
-alias gpsql='ssh -L 127.0.0.1:5000:localhost:5432 jsafrit@base003.truveon.com'
-alias gpolar='ssh localhost -p 2222'
+alias goj='ssh -t jsafrit@staging.truveon.com screen -R'
+alias gojp='ssh -t jsafrit@truefficiency.truveon.com screen -R'
+
+alias gpsqls='ssh -L 127.0.0.1:5000:localhost:5432 jsafrit@staging.truveon.com'
+alias gpsqlp='ssh -L 127.0.0.1:5000:localhost:5432 jsafrit@truefficiency.truveon.com.truveon.com'
+
+# alias gpolar='ssh localhost -p 2222'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 #alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
