@@ -12,7 +12,7 @@ bindkey -k F2 next
 
 # Window list at the bottom. hostname, centered tabs and redmarked active windows
 hardstatus alwayslastline
-hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{y}%Y-%m-%d %{W}%c %{g}]'
 # Default screens (uncomment below for default screen sessions to run on screen (-t sets the title for each screen session)
 ##  screen -t shell1	0
 ##  screen -t shell2	1
