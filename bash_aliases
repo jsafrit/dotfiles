@@ -9,16 +9,26 @@ alias greph="history | grep "
 alias gno="gnome-open"
 alias pu="pushd"
 alias po="popd"
-alias updateme='sudo apt-get update && sudo apt-get upgrade'
+alias updateme='sudo apt update && sudo apt upgrade'
 alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
-alias goproxy='ssh -D 6666 constp -N'
-alias checkproxy='netstat -ntlp | grep :6666'
-alias goh='ssh -t jsafrit@grizzly.dnsdojo.com screen -R'
-alias gor='ssh -t rnortman@base003.truveon.com screen -R'
-alias goj='ssh -t jsafrit@base003.truveon.com screen -R'
-alias gojd='ssh -t jsafrit@dev001.truveon.com screen -R'
-alias gpsql='ssh -L 127.0.0.1:5000:localhost:5432 jsafrit@base003.truveon.com'
-alias gpolar='ssh localhost -p 2222'
+alias nyancat='nc -v nyancat.dakko.us 23'
+alias httpd='python -m SimpleHTTPServer'
+# alias goproxy='ssh -D 6666 constp -N'
+# alias checkproxy='netstat -ntlp | grep :6666'
+
+alias gohi='ssh -t jsafrit@192.168.0.199 screen -R'
+alias goho='ssh -t jsafrit@grizzly.dnsdojo.com screen -R'
+
+# alias goj='ssh -t jsafrit@staging.truveon.com screen -R'
+# alias gojp='ssh -t jsafrit@truefficiency.truveon.com screen -R'
+
+alias gbast='ssh ubuntu@bastion.truveon.com'
+alias gcmds='ssh ubuntu@commander-staging.truveon.com'
+alias gcmdp='ssh ubuntu@commander-production.truveon.com'
+
+alias gdbs='ssh -L 5431:truveon-staging-db.truveon.com:5432 ubuntu@bastion.truveon.com'
+alias gdbp='ssh -L 5431:truveon-production-db.truveon.com:5432 ubuntu@bastion.truveon.com'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 #alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -41,6 +51,12 @@ function g {
 function psg { 
     ps -efw | grep $* | grep -v grep
 }
+
+function calc() { python -c "from __future__ import division; from math import *; print($*)"; }
+
+function cmdfu() { curl "http://www.commandlinefu.com/commands/matching/$(echo '$@' | sed 's/ /-/g')/$(echo -n $@ | base64)/plaintext" ;}
+
+function down4me() { curl -s "http://downforeveryoneorjustme.com/$1" | sed '/just you/!d;s/<[^>]*>//g'; }
 
 function mcd () { mkdir -p "$@" && cd "$@"; }
 
