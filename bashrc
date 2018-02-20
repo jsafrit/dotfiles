@@ -22,8 +22,11 @@ PROMPT_COMMAND='history -a'
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=50000
+HISTSIZE=10000
+HISTFILESIZE=500000
+
+# enable Ctrl-R, Ctrl-S search in command line history
+stty -ixon
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
