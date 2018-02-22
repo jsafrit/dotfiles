@@ -18,6 +18,7 @@ alias httpd='python -m SimpleHTTPServer'
 
 alias gohi='ssh -t jsafrit@192.168.0.199 screen -R'
 alias goho='ssh -t jsafrit@grizzly.dnsdojo.com screen -R'
+alias gogg='ssh -t jsafrit@grizzlyguru.com screen -R'
 
 # alias goj='ssh -t jsafrit@staging.truveon.com screen -R'
 # alias gojp='ssh -t jsafrit@truefficiency.truveon.com screen -R'
