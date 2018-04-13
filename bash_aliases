@@ -13,6 +13,8 @@ alias updateme='sudo apt update && sudo apt upgrade'
 alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias nyancat='nc -v nyancat.dakko.us 23'
 alias httpd='python -m SimpleHTTPServer'
+alias tb='nc termbin.com 9999'
+
 # alias goproxy='ssh -D 6666 constp -N'
 # alias checkproxy='netstat -ntlp | grep :6666'
 
